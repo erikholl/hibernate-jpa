@@ -13,4 +13,8 @@ public class ColorService {
     public void addColor(Color c) {
         colorDao.addColor(c);
     }
+
+    public void updateAttribute(Color c) {
+        colorDao.updateAttribute(c);
+    }
 }

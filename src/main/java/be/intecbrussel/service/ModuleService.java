@@ -10,7 +10,8 @@ public class ModuleService {
         this.moduleDao = new ModuleDAO();
     }
 
-    public void addModule(Module m) {
+    public Module addModule(Module m) {
         moduleDao.addModule(m);
+        return m;
     }
 }

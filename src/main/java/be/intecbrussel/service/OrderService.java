@@ -10,7 +10,8 @@ public class OrderService {
         this.orderDao = new OrderDAO();
     }
 
-    public void addOrder(Order o) {
+    public Order addOrder(Order o) {
         orderDao.addOrder(o);
+        return o;
     }
 }

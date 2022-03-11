@@ -1,108 +1,107 @@
 package be.intecbrussel.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
+@Table(name = "order_table")
 public class Order {
     @Id
-//    @GeneratedValue
+    @GeneratedValue
     private int id;
-    private String order_number;
-    private String order_client;
-    private String order_delivery_address;
-    private int order_delivery_postalcode;
-    private String order_delivery_city;
-    private boolean is_vat_free;
-    private boolean is_send;
-    private Date order_date;
+    @Column(name = "order_number") private String orderNr;
+    @Column(name = "order_client") private String orderClient;
+    @Column(name = "order_delivery_address") private String deliveryAddress;
+    @Column(name = "order_delivery_postalcode") private int deliveryPostal;
+    @Column(name = "order_delivery_city") private String deliveryCity;
+    @Column(name = "is_vat_free") private boolean vatFree;
+    @Column(name = "is_send") private boolean isSent;
+    @Column(name = "order_date") private Date orderDate;
 
     public int getId() {
         return id;
     }
 
-    public void setId() {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getOrder_number() {
-        return order_number;
+    public String getOrderNr() {
+        return orderNr;
     }
 
-    public void setOrder_number(String orderNr) {
-        this.order_number = orderNr;
+    public void setOrderNr(String orderNr) {
+        this.orderNr = orderNr;
     }
 
-    public String getOrder_client() {
-        return order_client;
+    public String getOrderClient() {
+        return orderClient;
     }
 
-    public void setOrder_client(String client) {
-        this.order_client = client;
+    public void setOrderClient(String orderClient) {
+        this.orderClient = orderClient;
     }
 
-    public String getOrder_delivery_address() {
-        return order_delivery_address;
+    public String getDeliveryAddress() {
+        return deliveryAddress;
     }
 
-    public void setOrder_delivery_address(String deliveryAddress) {
-        this.order_delivery_address = deliveryAddress;
+    public void setDeliveryAddress(String deliveryAddress) {
+        this.deliveryAddress = deliveryAddress;
     }
 
-    public int getOrder_delivery_postalcode() {
-        return order_delivery_postalcode;
+    public int getDeliveryPostal() {
+        return deliveryPostal;
     }
 
-    public void setOrder_delivery_postalcode(int deliveryPostal) {
-        this.order_delivery_postalcode = deliveryPostal;
+    public void setDeliveryPostal(int deliveryPostal) {
+        this.deliveryPostal = deliveryPostal;
     }
 
-    public String getOrder_delivery_city() {
-        return order_delivery_city;
+    public String getDeliveryCity() {
+        return deliveryCity;
     }
 
-    public void setOrder_delivery_city(String deliveryCity) {
-        this.order_delivery_city = deliveryCity;
+    public void setDeliveryCity(String deliveryCity) {
+        this.deliveryCity = deliveryCity;
     }
 
-    public boolean isIs_vat_free() {
-        return is_vat_free;
+    public boolean isVatFree() {
+        return vatFree;
     }
 
-    public void setIs_vat_free(boolean is_vat_free) {
-        this.is_vat_free = is_vat_free;
+    public void setVatFree(boolean vatFree) {
+        this.vatFree = vatFree;
     }
 
-    public boolean isIs_send() {
-        return is_send;
+    public boolean isSent() {
+        return isSent;
     }
 
-    public void setIs_send(boolean is_send) {
-        this.is_send = is_send;
+    public void setSent(boolean sent) {
+        isSent = sent;
     }
 
-    public Date getOrder_date() {
-        return order_date;
+    public Date getOrderDate() {
+        return orderDate;
     }
 
-    public void setOrder_date(Date orderDate) {
-        this.order_date = orderDate;
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
     }
 
     @Override
     public String toString() {
         return "Order{" +
                 "id=" + id +
-                ", orderNr='" + order_number + '\'' +
-                ", client='" + order_client + '\'' +
-                ", deliveryAddress='" + order_delivery_address + '\'' +
-                ", deliveryPostal=" + order_delivery_postalcode +
-                ", deliveryCity='" + order_delivery_city + '\'' +
-                ", isVatFree=" + is_vat_free +
-                ", isSent=" + is_send +
-                ", orderDate=" + order_date +
+                ", orderNr='" + orderNr + '\'' +
+                ", orderClient='" + orderClient + '\'' +
+                ", deliveryAddress='" + deliveryAddress + '\'' +
+                ", deliveryPostal=" + deliveryPostal +
+                ", deliveryCity='" + deliveryCity + '\'' +
+                ", vatFree=" + vatFree +
+                ", isSent=" + isSent +
+                ", orderDate=" + orderDate +
                 '}';
     }
 }

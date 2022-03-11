@@ -11,10 +11,10 @@ public class ModuleDAO {
         this.em = EntityMgr.getEntityManager();
     }
 
-    public void addModule(Module m) {
+    public Module addModule(Module m) {
         em.persist(m);
         em.getTransaction().begin();
         em.getTransaction().commit();
-        em.close();
+        return m;
     }
 }

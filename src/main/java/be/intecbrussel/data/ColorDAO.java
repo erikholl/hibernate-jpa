@@ -17,4 +17,11 @@ public class ColorDAO {
         em.getTransaction().commit();
         em.close();
     }
+
+    public void updateAttribute(Color c) {
+        em.merge(c);
+        em.getTransaction().begin();
+        em.getTransaction().commit();
+        em.close();
+    }
 }
