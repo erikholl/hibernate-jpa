@@ -1,4 +1,4 @@
-package be.intecbrussel.main;
+package be.intecbrussel.view;
 
 import be.intecbrussel.model.Message;
 

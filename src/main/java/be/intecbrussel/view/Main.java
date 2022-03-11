@@ -1,4 +1,4 @@
-package be.intecbrussel.main;
+package be.intecbrussel.view;
 
 import be.intecbrussel.model.Message;
 
@@ -51,7 +51,9 @@ public class Main {
 
         // Questions
         // how to assign different properties to properties (for instance,
-        // can be null, or cannot be null)
+        // can be null, or cannot be null, or automatic increment of Id)?
+        // how to add new fields to the DB, how to edit the DB?
+        // how does this fit in the view-service-data model?
 
         EntityManagerFactory emf = Persistence.createEntityManagerFactory(
                 "datasource");
@@ -68,7 +70,7 @@ public class Main {
 
         // few lines of code to add entry to DB. Difference though with JDBC
         // is that this program, with persistence, SQL queries need to be
-        // created by the application itself, which will take time. JDBC is
-        // faster
+        // created by the application itself, which will take time. using
+        // JDBC directly (and creating the queries manually) is faster
     }
 }
