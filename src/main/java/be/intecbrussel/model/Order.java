@@ -9,7 +9,11 @@ public class Order {
     @Id
     @GeneratedValue
     private int id;
-    @Column(name = "order_number") private String orderNr;
+
+    @Column(name = "order_number")
+//    @OneToMany(mappedBy = "order_table")
+    private String orderNr;
+
     @Column(name = "order_client") private String orderClient;
     @Column(name = "order_delivery_address") private String deliveryAddress;
     @Column(name = "order_delivery_postalcode") private int deliveryPostal;
