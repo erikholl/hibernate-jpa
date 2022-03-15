@@ -10,8 +10,8 @@ public class Product {
     @GeneratedValue
     private int id;
 
-    @Column(name = "order_id")
-    private String orderId;
+    @ManyToOne
+    private Order order;
 
     @Column(name = "product_name")
     private String productName;
@@ -29,12 +29,12 @@ public class Product {
         this.id = id;
     }
 
-    public String getOrderId() {
-        return orderId;
+    public Order getOrder() {
+        return order;
     }
 
-    public void setOrderId(String orderId) {
-        this.orderId = orderId;
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     public String getProductName() {
@@ -59,16 +59,5 @@ public class Product {
 
     public void setPricePerUnit(BigDecimal pricePerUnit) {
         this.pricePerUnit = pricePerUnit;
-    }
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", orderId='" + orderId + '\'' +
-                ", productName='" + productName + '\'' +
-                ", amount=" + amount +
-                ", pricePerUnit=" + pricePerUnit +
-                '}';
     }
 }

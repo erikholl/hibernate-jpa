@@ -17,29 +17,29 @@ public class Play {
 
     public static void main(String[] args) {
         // already executed
-//        Color c = new Color();
-//        c.setColorId(7);
-//        c.setRed(111); c.setGreen(111); c.setBlue(7);
-//        c.setHue(69); c.setSaturation(111f); c.setBrightness(111f);
-//        c.setName("Green Whatever");
-//        ColorService colorService = new ColorService();
-//        colorService.addColor(c);
+        Color color = new Color();
+        color.setColorId(7);
+        color.setRed(111); color.setGreen(111); color.setBlue(7);
+        color.setHue(69); color.setSaturation(111f); color.setBrightness(111f);
+        color.setName("Green Whatever");
+        ColorService colorService = new ColorService();
+        colorService.addColor(color);
 
-//        c.setName("Blue Coral");
-//        colorService.updateAttribute(c);
-//        colorService.deleteRecord(c);
+        color.setName("Blue Coral");
+        colorService.updateAttribute(color);
+//        colorService.deleteRecord(color);
 
         // already executed
-//        Module m = new Module();
-//        m.setModuleId(5); m.setModuleName("Generate 3"); m.setBrand(
-//                "Joranalogue");
-//        m.setWidthInHP(12); m.setDepthInMM(30);
-//        m.setPricePerUnit(new BigDecimal(350));
-//        m.setCurrentPlusTwelve(130); m.setCurrentMinTwelve(115); m.setCurrentPlusFive(0);
-//        m.setMainFunction("Oscillator"); m.setSecondaryFunction1("LFO");
-//        m.setUrl("https://joranalogue.com/generate-3");
-//        ModuleService moduleService = new ModuleService();
-//        System.out.println(moduleService.addModule(m));
+        Module m = new Module();
+        m.setModuleId(5); m.setModuleName("Generate 3"); m.setBrand(
+                "Joranalogue");
+        m.setWidthInHP(12); m.setDepthInMM(30);
+        m.setPricePerUnit(new BigDecimal(350));
+        m.setCurrentPlusTwelve(130); m.setCurrentMinTwelve(115); m.setCurrentPlusFive(0);
+        m.setMainFunction("Oscillator"); m.setSecondaryFunction1("LFO");
+        m.setUrl("https://joranalogue.com/generate-3");
+        ModuleService moduleService = new ModuleService();
+        System.out.println(moduleService.addModule(m));
 
 
         // already executed

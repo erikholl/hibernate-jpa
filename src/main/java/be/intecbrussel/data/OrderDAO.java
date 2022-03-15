@@ -16,16 +16,7 @@ public class OrderDAO {
         em.persist(order); // read more about the order
 
         em.getTransaction().begin();
-        // .begin signals to the DB the start of a transaction.
-        // a transaction is a bundle of DB instructions executed as 1 whole. Eg:
-        // bank account 1: 1000
-        // bank account 2: 1000
-        // 1 borrowed 50 from 2 >>
-        // UPDATE 1 950
-        // UPDATE 2 1050
-
         em.getTransaction().commit();
-        // .commit signals all instructions part of the transaction, to the DB.
 
         return order;
     }

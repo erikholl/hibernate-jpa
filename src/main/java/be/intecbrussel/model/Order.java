@@ -11,7 +11,6 @@ public class Order {
     private int id;
 
     @Column(name = "order_number")
-//    @OneToMany(mappedBy = "order_table")
     private String orderNr;
 
     @Column(name = "order_client") private String orderClient;

@@ -2,43 +2,42 @@ package be.intecbrussel.data;
 
 import be.intecbrussel.model.Product;
 
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 
 public class ProductDAO {
-    private EntityManager em;
+    private EntityManager entityManager;
 
     public ProductDAO() {
-        this.em = EntityMgr.getEntityManager();
+        this.entityManager = EntityMgr.getEntityManager();
     }
 
     public void addProduct(Product product) {
-        em.persist(product);
-        em.getTransaction().begin();
-        em.getTransaction().commit();
+        entityManager.persist(product);
+        entityManager.getTransaction().begin();
+        entityManager.getTransaction().commit();
 //        flushAndClear();
     }
 
     public Product findProduct(int id) {
-        return em.find(Product.class, id);
+        return entityManager.find(Product.class, id);
         //        flushAndClear();
     }
 
     public Product updateProduct(Product p) {
-        return em.merge(p);
+        return entityManager.merge(p);
         //        flushAndClear();
     }
 
     // TODO: read more
     private void flushAndClear() {
-        em.flush();
-        em.clear();
+        entityManager.flush();
+        entityManager.clear();
     }
 
     public void deleteProduct(Product product) {
-        em.remove(product);
-        em.getTransaction().begin();
-        em.getTransaction().commit();
+        entityManager.remove(product);
+        entityManager.getTransaction().begin();
+        entityManager.getTransaction().commit();
 //        flushAndClear();
     }
 }
